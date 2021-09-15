@@ -1,5 +1,6 @@
 How to add SSH & GPG Keys to GITHUB Account
 
+# SSH
 check if there is one
 ``` sh
 ssh-add -l
@@ -25,3 +26,8 @@ new SSH key
 add a title and paste key
 
 then click add SSH key
+
+
+# GPG
+
+[Generating a new GPG Key and setting it](https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/generating-a-new-gpg-key)
