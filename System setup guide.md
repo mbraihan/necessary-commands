@@ -105,3 +105,37 @@
     ``` shell
     $ source ~/.bashrc
     ```
+
+    Let's check the installation with
+
+    ``` shell
+    $ nvcc -V
+    or
+    nvidia-smi
+    ```
+    Compile test sample
+    ``` shell
+    $ cd /usr/local/cuda-11.4/samples/1_Utilities/deviceQuery
+    $ sudo make
+    $ ./deviceQuery
+    ```
+    Download cuDNN & unzip
+    ``` shell
+    $ tar -xzvf cudnn-11.4-linux-x64-v8.2.2.26.tgz
+    ```
+    Copy the file to CUDA Toolkit directory
+
+    ``` shell
+    $ sudo cp cuda/include/cudnn*.h /usr/local/cuda/include
+    $ sudo cp -P cuda/lib64/libcudnn* /usr/local/cuda/lib64
+    # reset the read and write permissions of the cudnn.h file
+    $ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
+
+    $ cd cuda
+    $ sudo cp lib64/* <Path_to_your_Cuda>/lib64/
+    $ sudo cp include/* <Path_to_your_Cuda>/include/
+    ```
+    Test cuDNN version
+    ``` shell
+    $ cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR
+    ```
