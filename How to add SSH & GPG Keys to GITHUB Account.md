@@ -27,6 +27,16 @@ add a title and paste key
 
 then click add SSH key
 
+if already a key exists, generate new one then
+
+``` shell
+$ eval "$(ssh-agent -s)"
+$ ssh-add ~/.ssh/{PrivatekeyName}
+```
+
+
+
+
 
 # GPG
 
